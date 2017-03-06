@@ -5,14 +5,14 @@
         <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Baloo Tamma|David Libre|Open Sans Condensed|Ubuntu|Pavanam|Pacifico">
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
-        <script type="text/javascript">
+        <script type="text/javascript" src="/UI/main.js">
         // Search function
         $(document).ready(function(){
               $("#search_name").keyup(function(){
                   // Retrieve the input field text
                   var filter = $(this).val();
                   // Loop through the patient list
-                  
+
                   $(parseJSON(JSON.stringify("#lisi li"))).each(function(){
                       // If the list item does not contain the text phrase fade it out
                       if ($(this).text().search(new RegExp(filter, "i")) < 0) {
