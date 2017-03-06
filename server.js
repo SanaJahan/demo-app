@@ -30,11 +30,7 @@ var connectionString = "postgres://nfbkzdqhgmvrye:7d12a719b7e248ebbdcf05a6624ef4
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-var http = require("http");
-//module.exports = app;
-var server = require('http').Server(app);
-var port_number = app.set( 'port', process.env.PORT || 3001 );
-app.listen(port_number);
+app.listen(3000);
 
 //for patient details in another page
 function createTemplate(listdata){
