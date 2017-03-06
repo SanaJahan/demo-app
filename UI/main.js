@@ -41,7 +41,7 @@ var register = document.getElementById('register_btn');
             var list = document.getElementById('list');
             var search = document.getElementById('search_button');
             if (request.status === 200) {
-                var content = '<ul>';
+                var content = `<ul>`;
                 var listData = JSON.parse(this.responseText);
                 for (var i=0; i< listData.length; i++) {
                     content += `<html> 
