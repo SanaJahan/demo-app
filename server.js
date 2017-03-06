@@ -31,7 +31,8 @@ var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 
-
+module.exports = app;
+var server;
 var port_number = server.listen(process.env.PORT || 3000);
 app.listen(port_number);
 
