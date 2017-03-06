@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="/UI/style.css" rel="stylesheet" /> 
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Baloo Tamma|David Libre|Open Sans Condensed|Ubuntu|Pavanam|Pacifico">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+        <script type="text/javascript">
+        // Search function
+        $(document).ready(function(){
+              $("#search_name").keyup(function(){
+                  // Retrieve the input field text
+                  var filter = $(this).val();
+                  // Loop through the patient list
+                  $("#list li").each(function(){
+                      // If the list item does not contain the text phrase fade it out
+                      if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                          $(this).fadeOut();
+                      // Show the list item if the phrase matches
+                      } else {
+                          $(this).show();
+                      }
+                  });
+               });
+            });
+              </script>
+    </head>
+    <body>
+        
+           <p align = "left" style="font-family: Baloo Tamma;font-size: 1.5em">Welcome to patient help desk</p><br/><br/>
+           <ul><li style="font-family: Baloo Tamma;font-size: 1.2em"><b><a href="/newUser"> Click here to enter patient details</a></b></li>
+           </ul><br><br>
+           <div class="button_box2">
+            <form class="form-wrapper-2 cf">
+            <input type="text" id="search_name" name="search" placeholder="Search here..." required>
+            <button type="submit" id="search_button">Search</button>
+            </form></div>
+            <br><br> 
+            <div id="list" name="listname">
+            </div>
+        <script type="text/javascript" src="/UI/main.js">
+        </script>
+    </body>
+</html>
+
