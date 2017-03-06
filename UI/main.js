@@ -100,7 +100,7 @@ var register = document.getElementById('register_btn');
         }
     };
     
-    request.open('GET', '/', true);
+    request.open('GET', '/home', true);
     request.send(null);
 }
 loadList();
