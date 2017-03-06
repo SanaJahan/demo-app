@@ -30,7 +30,6 @@ var connectionString = "postgres://nfbkzdqhgmvrye:7d12a719b7e248ebbdcf05a6624ef4
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-app.listen(3000);
 
 //for patient details in another page
 function createTemplate(listdata){
@@ -212,9 +211,9 @@ input[type=number]:focus {
 
         
 // Creating the database pool
-//var pool = new Pool(config);
+
 const env = process.env.DATABASE_URL;
-var pool = pgp(env || config);
+var pool = new Pool(config || env);
 console.log("connect");
 //var pool = new pg.connect(connectionString);
 /*var pool = new pg.Client(connectionString);
