@@ -30,9 +30,9 @@ var connectionString = "postgres://nfbkzdqhgmvrye:7d12a719b7e248ebbdcf05a6624ef4
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-
+var http = require("http");
 module.exports = app;
-var server;
+var server = http.createServer();
 var port_number = server.listen(process.env.PORT || 3000);
 app.listen(port_number);
 
