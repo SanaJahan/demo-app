@@ -259,6 +259,7 @@ app.get('/home',function(req,res){
     else {
         listOfPatients=JSON.stringify(result.rows);
         res.send(listOfPatients);
+        console.log(listOfpatients);
         }  
    });
   });
