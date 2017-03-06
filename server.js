@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var pgp = require('pg-promise')();
 var config = {
     user : 'postgres',
-    client : 'postgresql',
+    //client : 'postgresql',
     database: 'patients',
     host: '127.0.0.1',
     port: '5434',
@@ -31,8 +31,8 @@ var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 var http = require("http");
-module.exports = app;
-var server = http.createServer();
+//module.exports = app;
+//var server = http.createServer();
 var port_number = app.set( 'port', process.env.PORT || 3001 );
 app.listen(port_number);
 
@@ -219,6 +219,7 @@ input[type=number]:focus {
 //var pool = new Pool(config);
 const env = process.env.DATABASE_URL;
 var pool = pgp(env || config);
+console.log("connect");
 //var pool = new pg.connect(connectionString);
 /*var pool = new pg.Client(connectionString);
        function handleDisconnect() {
