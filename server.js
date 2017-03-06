@@ -10,7 +10,7 @@ var config = {
     user : 'postgres',
     client : 'postgresql',
     database: 'patients',
-    //host: '127.0.0.1',
+    host: '127.0.0.1',
     port: '5434',
     password: process.env.DB_PASSWORD
 };
