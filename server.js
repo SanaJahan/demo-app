@@ -32,7 +32,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 var http = require("http");
 //module.exports = app;
-//var server = http.createServer();
+var server = require('http').Server(app);
 var port_number = app.set( 'port', process.env.PORT || 3001 );
 app.listen(port_number);
 
