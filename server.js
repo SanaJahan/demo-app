@@ -218,7 +218,7 @@ input[type=number]:focus {
 // Creating the database pool
 //var pool = new Pool(config);
 const env = process.env.DATABASE_URL;
-var pool = pgp(ENV || config);
+var pool = pgp(env || config);
 //var pool = new pg.connect(connectionString);
 /*var pool = new pg.Client(connectionString);
        function handleDisconnect() {
