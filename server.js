@@ -178,7 +178,7 @@ input[type=number]:focus {
                 </div>
                 <hr />
                 <h1>Welcome</h1>
-                <div id="login_area"><form name="registration">
+                <div id="login_area" name="registration">
                    <p align = "center"><label> ENTER YOUR FIRSTNAME: </label><br>
                     <input type="text" id="firstname" name="firstname" placeholder="Your first name" /><br /><br/>
                     <label> ENTER YOUR LASTNAME: </label><br>
@@ -200,7 +200,7 @@ input[type=number]:focus {
                      </p>
                     <br/><br/>
                     <p align = "center"><button class="button" id="register_btn" name="register_btn" />Register</button> </p>                             
-                    <br></form>
+                    <br>
                     <center><a href = "/search">Already registered?Click here</a> </center>
                 </div>
                 <br><hr>
