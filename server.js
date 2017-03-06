@@ -233,6 +233,7 @@ app.post('/create-user',function(req,res){
   var firstname = req.body.firstname;
   var lastname = req.body.lastname;
   var age = req.body.age;
+  var dob = req.body.dob;
   var gender = req.body.gender;
   var phone = req.body.phone;
   var randomtext=req.body.randomtext;
