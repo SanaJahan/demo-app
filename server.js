@@ -126,7 +126,7 @@ input[type=number]:focus {
                 <!-- Include Required Prerequisites -->
               <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
               <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
-              <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+              <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
                
               <!-- Include Date Range Picker 
               <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
