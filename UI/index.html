@@ -12,7 +12,8 @@
                   // Retrieve the input field text
                   var filter = $(this).val();
                   // Loop through the patient list
-                  $("#list li").each(function(){
+                  
+                  $(parseJSON(JSON.stringify("#lisi li"))).each(function(){
                       // If the list item does not contain the text phrase fade it out
                       if ($(this).text().search(new RegExp(filter, "i")) < 0) {
                           $(this).fadeOut();
