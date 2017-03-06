@@ -5,6 +5,7 @@ var session = require('express-session');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+var pgp = require('pg-promise')();
 var config = {
     user : 'postgres',
     client : 'postgresql',
@@ -31,7 +32,8 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 
 
-
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
 
 //for patient details in another page
 function createTemplate(listdata){
@@ -214,6 +216,8 @@ input[type=number]:focus {
         
 // Creating the database pool
 var pool = new Pool(config);
+const env = process.env.DATABASE_URL;
+var db = pgp(ENV);
 //var pool = new pg.connect(connectionString);
 /*var pool = new pg.Client(connectionString);
        function handleDisconnect() {
