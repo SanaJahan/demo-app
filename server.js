@@ -30,7 +30,9 @@ var connectionString = "postgres://nfbkzdqhgmvrye:7d12a719b7e248ebbdcf05a6624ef4
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 //for patient details in another page
 function createTemplate(listdata){
     var firstname = listdata.firstname;
