@@ -251,7 +251,7 @@ app.post('/create-user',function(req,res){
 });
 
 //API for getting list of patients
-app.get('/',function(req,res){
+app.get('/home',function(req,res){
     pool.query('SELECT userid,firstname,lastname FROM patient_info ORDER BY userid DESC' , function (err,result){
     if(err){
         res.status(500).send(err.toString());
