@@ -139,7 +139,7 @@ input[type=number]:focus {
                     jQuery.validator.addMethod("exactlength", function(value, phone, param) {
                      return this.optional(phone) || value.length == param;
                     }, $.validator.format("Please enter exactly {0} characters."));
-                    $("form[name='registration']").validate({
+                    $("div[name='registration']").validate({
                       // Specify validation rules
                       rules: {
                         firstname: "required",
