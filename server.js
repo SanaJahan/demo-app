@@ -33,7 +33,7 @@ app.use(bodyParser.json());
 var http = require("http");
 module.exports = app;
 var server = http.createServer();
-var port_number = server.listen(process.env.PORT || 3000);
+var port_number = app.set( 'port', process.env.PORT || 3001 );
 app.listen(port_number);
 
 //for patient details in another page
@@ -216,9 +216,9 @@ input[type=number]:focus {
 
         
 // Creating the database pool
-var pool = new Pool(config);
+//var pool = new Pool(config);
 const env = process.env.DATABASE_URL;
-var db = pgp(ENV);
+var pool = pgp(ENV || config);
 //var pool = new pg.connect(connectionString);
 /*var pool = new pg.Client(connectionString);
        function handleDisconnect() {
