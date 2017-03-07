@@ -28,9 +28,12 @@ var register = document.getElementById('register_btn');
         var randomtext = document.getElementById('random_text').value;
         if(phone.toString.length < 10)
          {
-          phone.innerHTML("Enter valid phone number");}
-        if(age > 101 || age < 0)
-          {age.innerHTML("Enter valid age");}
+           document.getElementById('phone').innerHTML="this is invalid number ";
+           document.registration.firstname.value="";
+           document.registration.firstname.focus();
+         }
+        //if(age > 101 || age < 0)
+        //  {age.innerHTML("Enter valid age");}
         request.open('POST','/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({firstname: firstname, lastname: lastname,age: age,dob:dob,gender: gender, phone: phone, randomtext: randomtext}));  
