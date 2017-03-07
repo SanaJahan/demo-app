@@ -98,7 +98,7 @@ function createNewFormTemplate(){
                     // Initialize form validation on the registration form.
                     jQuery.validator.addMethod("exactlength", function(value, phone, param) {
                      return this.optional(phone) || value.length == param;
-                    }, $.validator.format("Please enter exactly {0} digits."));
+                    }, $.validator.format("Please enter valid number"));
                     $("form[name='registration']").validate({
                       // Specify validation rules
                       rules: {
@@ -137,7 +137,7 @@ function createNewFormTemplate(){
                 <p class="contact"><label for="dob">Your birthday</label></p>
                 <input id="DOB" name="DOB" placeholder="Your birthdate" required="" type="text">
                 <p class="contact"><label for="gender">Your gender</label></p>
-                <select class="select-style gender" name="gender">
+                <select class="select-style gender" name="gender" id="gender">
                 <option value="select">I am..</option>
                 <option value="m">Male</option>
                 <option value="f">Female</option>
