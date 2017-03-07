@@ -1,6 +1,6 @@
 /* search box */
 /*-------------------------------------*/
-.cf:before, .cf:after{
+/*.cf:before, .cf:after{
 content:"";
 display:table;
 }
@@ -9,10 +9,10 @@ clear:both;
 }
 .cf{
 zoom:1;
-}
+}*/
 /*-------------------------------------*/
 
-.form-wrapper-2 {
+#search_name {
 width: 330px;
 padding: 15px;
 background: #555;
@@ -23,11 +23,11 @@ border-radius: 10px;
 -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
 box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
 }
-.form-wrapper-2 input {
+#search_name input {
 width: 210px;
 height: 20px;
 padding: 10px 5px;
-float: left;
+float: right;
 font: bold 15px 'Raleway', sans-serif;
 border: 0;
 background: #eee;
@@ -35,24 +35,24 @@ background: #eee;
 -webkit-border-radius: 3px 0 0 3px;
 border-radius: 3px 0 0 3px;
 }
-.form-wrapper-2 input:focus {
+#search_name input:focus {
 outline: 0;
 background: #fff;
 -moz-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
 -webkit-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
 box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
 }
-.form-wrapper-2 input::-webkit-input-placeholder {
+#search_name input::-webkit-input-placeholder {
 color: #999;
 font-weight: normal;
 .font-style: italic;
 }
-.form-wrapper-2 input:-moz-placeholder {
+#search_name input:-moz-placeholder {
 color: #999;
 font-weight: normal;
 font-style: italic;
 }
-.form-wrapper-2 input:-ms-input-placeholder {
+#search_name input:-ms-input-placeholder {
 color: #999;
 font-weight: normal;
 font-style: italic;
