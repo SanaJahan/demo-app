@@ -135,7 +135,7 @@ function createNewFormTemplate(){
                 <p class="contact"><label for="lastname">Last Name</label></p>
                 <input id="lastname" name="lastname" placeholder="Last name" required="" tabindex="1" type="text">
                 <p class="contact"><label for="age">Your age</label></p>
-                <input id="age" name="age" placeholder="Your age" required="" type="text">
+                <input id="age" name="age" placeholder="Your age" required="" type="number">
                 <p class="contact"><label for="dob">Your birthday</label></p>
                 <input id="DOB" name="DOB" placeholder="Your birthdate" required="" type="text">
                 <p class="contact"><label for="gender">Your gender</label></p>
@@ -146,7 +146,7 @@ function createNewFormTemplate(){
                 <option value="others">Other</option>
                         </select><br><br>
                 <p class="contact"><label for="phone">Mobile phone</label></p>
-                <input id="phone" name="phone" placeholder="phone number" required="" type="text">
+                <input id="phone" name="phone" placeholder="phone number" required="" type="number">
                 <p class="contact"><label for="text_area" id="random_text">Any queries</label></p>
                 <textarea id="random_text" placeholder="Type your queries here" required="" rows="5" cols="60" name = "random_text"></textarea><br>
                 <center><input class="button" name="submit" id="register_btn" tabindex="5" value="Register" type="submit"></center>  
