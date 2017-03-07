@@ -74,55 +74,15 @@ function createNewFormTemplate(){
             <head>
                 <title>Please enter following details</title>
                 <meta name = "viewport" content = "width = device-width initial-scale=1" />
-                
+                <link href="/UI/style.css" rel="stylesheet" />
                      <style>
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-.button:hover {background-color: #3e8e41}
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-input[type=text] {
-    border: 2px solid red;
-    border-radius: 4px;
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #555;
-    outline: none;
-}
-input[type=number] {
-    border: 2px solid red;
-    border-radius: 4px;
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #555;
-    outline: none;
-}
-input[type=text]:focus {
-    background-color: lightblue;
-}
-input[type=number]:focus {
-    background-color: lightblue;
-}
-</style>        
+                        input[type=text]:focus {
+                            background-color: lightblue;
+                        }
+                        input[type=number]:focus {
+                            background-color: lightblue;
+                        }
+                      </style>        
                 <!-- Include Required Prerequisites -->
               <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
               <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
@@ -142,8 +102,6 @@ input[type=number]:focus {
                     $("form[name='registration']").validate({
                       // Specify validation rules
                       rules: {
-                        firstname: "required",
-                        lastname: "required",
                         age: {
                           required: true,
                           range: [0,100]
@@ -157,8 +115,6 @@ input[type=number]:focus {
                       },
                       // Specify validation error messages
                       messages: {
-                        firstname: "Please enter your firstname",
-                        lastname: "Please enter your lastname",
                         age: {
                           required: "Please provide a valid age"
                         },
@@ -179,29 +135,29 @@ input[type=number]:focus {
                 <hr />
                 <h1>Welcome</h1>
                 <div id="login_area"> <form name="registration">
-                   <p align = "center"><label> ENTER YOUR FIRSTNAME: </label><br>
-                    <input type="text" id="firstname" name="firstname" placeholder="Your first name" /><br /><br/>
-                    <label> ENTER YOUR LASTNAME: </label><br>
-                    <input type="text" id="lastname" name="lastname" placeholder="Your last name" /></br><br>
-                    <label> ENTER YOUR AGE:   </label><br>
-                    <input type="number" id="age" name="age" placeholder="Your age" /><br /><br/>
-                    <label> ENTER YOUR DOB:   </label><br>
-                    <input type="text" id="DOB" name="DOB" placeholder="Your BirthDate" /><br /><br/>
-                    <label> SELECT GENDER : </label><br>
-                    <select id="gender" name ="gender" >
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                    </select>
-                      <br /><br />
-                    <label> ENTER PHONENO. : </label><br>
-                    <input type="number" id="phone" name="phone"  placeholder = "Your Phone number" /><br/>
-                    <textarea id="random_text" rows="5" cols="60" name = "random_text" placeholder="Enter your text information"></textarea>
-                     <br/><br/>
-                     </p>
-                    <br/><br/>
-                    <p align = "center"><button class="button" id="register_btn" name="register_btn" />Register</button> </p>                             
-                    <br><?form>
-                    <center><a href = "/search">Already registered?Click here</a> </center>
+                   <form name="registration">
+                <p class="contact"><label for="firstname">First Name</label></p>
+                <input id="firstname" name="firstname" placeholder="First name" required="" tabindex="1" type="text">
+                <p class="contact"><label for="lastname">Last Name</label></p>
+                <input id="lastname" name="lastname" placeholder="Last name" required="" tabindex="1" type="text">
+                <p class="contact"><label for="age">Your age</label></p>
+                <input id="age" name="age" placeholder="Your age" required="" type="text">
+                <p class="contact"><label for="dob">Your birthday</label></p>
+                <input id="DOB" name="DOB" placeholder="Your birthdate" required="" type="text">
+                <select class="select-style gender" name="gender">
+                <option value="select">I am..</option>
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+                <option value="others">Other</option>
+                        </select><br><br>
+                <p class="contact"><label for="phone">Mobile phone</label></p>
+                <input id="phone" name="phone" placeholder="phone number" required="" type="text">
+                <p class="contact"><label for="text_area" id="random_text">Any queries</label></p>
+                <textarea id="random_text" placeholder="Type your queries here" required="" rows="5" cols="60" name = "random_text"></textarea><br>
+                <center><input class="button" name="submit" id="register_btn" tabindex="5" value="Register" type="submit"></center>  
+                </form>                            
+                <br>
+                <center><a href = "/">Already registered?Click here</a> </center>
                 </div>
                 <br><hr>
                <script type="text/javascript" src="/UI/main.js">
@@ -216,7 +172,7 @@ input[type=number]:focus {
 
 const env = process.env.DATABASE_URL;
 var pool = new Pool(config || env);
-console.log("connect");
+//console.log("connect");
 //var pool = new pg.connect(connectionString);
 /*var pool = new pg.Client(connectionString);
        function handleDisconnect() {
@@ -259,7 +215,6 @@ app.get('/home',function(req,res){
     else {
         listOfPatients=JSON.stringify(result.rows);
         res.send(listOfPatients);
-        console.log(listOfpatients);
         }  
    });
   });
