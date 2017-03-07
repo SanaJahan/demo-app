@@ -62,7 +62,7 @@ var register = document.getElementById('register_btn');
         if (request.readyState === XMLHttpRequest.DONE) {
             var list = document.getElementById('list');
             if (request.status === 200) {
-                var content = `<div id="list"><ul>`;
+                var content = '<ul>';
                 var listData = JSON.parse(this.responseText);
                 for (var i=0; i< listData.length; i++) {
                     content += `<html> 
@@ -70,14 +70,14 @@ var register = document.getElementById('register_btn');
                 <meta name = "viewport" content = "width = device-width initial-scale=1" />
                   <title></title>
                         <body>
-                            <ul>
+                            <ul id="list">
                             <li>
                     <a href="/patient/${listData[i].userid}">${listData[i].firstname} ${listData[i].lastname}</a>
                     </li>`;
 
 
                 }
-                content += "</ul></div><br><br></body>";
+                content += "</ul><br><br></body>";
                 list.innerHTML = content;
             }
             else {
