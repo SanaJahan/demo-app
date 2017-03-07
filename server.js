@@ -83,53 +83,7 @@ function createNewFormTemplate(){
                             background-color: lightblue;
                         }
                       </style>        
-                <!-- Include Required Prerequisites 
-              <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>-->
-              <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> 
-              <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script> -->
                
-              <!-- Include Date Range Picker 
-              <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-              <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
-              <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />-->
-             <-- <script type="text/javascript"> 
-                 //  first DOM loads
-                  $(function() {
-                    // Initialize form validation on the registration form.
-                    jQuery.validator.addMethod("exactlength", function(value, phone, param) {
-                     return this.optional(phone) || value.length == param;
-                    }, $.validator.format("Please enter valid number"));
-                    $("form[name='registration']").validate({
-                      // Specify validation rules
-                      rules: {
-                        age: 
-                         { range: [0,100]},
-                        phone:
-                          {exactlength: 10}
-                      },
-                      // Specify validation error messages
-                      messages: {
-                        age: {
-                            range: "Please provide a valid age"
-                        },
-                        highlight: function(element, errorClass) {
-                             $(element).fadeOut(function() {
-                             $(element).fadeIn();
-                                });
-                              }
-                            },
-                        submitHandler: function(form) {
-                         if($('.registration').valid())
-                            {
-                             form.submit();     
-                            }
-                         else{
-                             document.location.href = "/newUser";
-                          }
-                    }
-                    });
-                  });
-            </script> -->
             </head>
             <body>
                 <div class=container-articles>
