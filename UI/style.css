@@ -50,7 +50,7 @@ form {
   position: relative;
 }
 
-input {
+#form input {
   width: 0px;
   height: 25px;
   font-size: 15px;
