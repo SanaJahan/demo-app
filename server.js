@@ -90,18 +90,21 @@ function createNewFormTemplate(){
                   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
       
                     <script>
-                           $(function() {
-                          $( "#DOB" ).datepicker({
-                            onSelect: function(value, ui) {
-                            var today = new Date(), 
-                            age = today.getFullYear() - ui.selectedYear;
-                             $('#age').value = age ;
-                               },
-                            changeMonth: true,
-                            changeYear: true,
-                            yearRange: '1917:'+(new Date).getFullYear() 
+                          $(function() {
+                          
+                           $('#DOB').datepicker({
+                          onSelect: function(value, ui) {
+                              var today = new Date(),
+                                  dob = new Date(value),
+                                  age = new Date(today - dob).getFullYear();
 
-                          });
+                              $('#age').text(age);
+                          },
+                          maxDate: '+0d',
+                          yearRange: '1917:'+(new Date).getFullYear(),
+                          changeMonth: true,
+                          changeYear: true
+                      });
 
                     });
                     </script>
