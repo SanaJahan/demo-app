@@ -83,8 +83,8 @@ function createNewFormTemplate(){
                             background-color: lightblue;
                         }
                       </style>        
-                <!-- Include Required Prerequisites -->
-              <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+                <!-- Include Required Prerequisites 
+              <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>-->
               <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> 
               <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script> -->
                
