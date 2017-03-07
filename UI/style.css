@@ -171,22 +171,22 @@ padding: 0;
 #register_area input.button:hover    { background-color: #2a78f6; }
 
 /* Heading of main page */
-#app-heading h1 i {
-	padding-right: 10px;
-	color: #A8D13B;
-	font-size: 0.8em;
-}
 
 #app-heading h1 {
-	margin: 1em 0 0.75em;
-	padding: 0 0 5px 0;
-	color: #6B5344;
+	margin: 1em 0 0.5em 0;
+	color: #343434;
 	font-weight: normal;
-	position: relative;
-	text-shadow: 0 2px 0 rgba(255,255,255,0.5);
+	font-family: 'Ultra', sans-serif;   
 	font-size: 36px;
-	line-height: 40px;
-	font-family: 'Carrois Gothic', sans-serif;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+	padding: 15px 15px 15px 15%;
+	box-shadow: 
+		inset 0 0 0 1px rgba(53,86,129, 0.4), 
+		inset 0 0 5px rgba(53,86,129, 0.5),
+		inset -285px 0 35px white;
+	border-radius: 0 10px 0 10px;
 }
 
 
