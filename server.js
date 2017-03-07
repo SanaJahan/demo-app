@@ -102,15 +102,11 @@ function createNewFormTemplate(){
                     $("form[name='registration']").validate({
                       // Specify validation rules
                       rules: {
-                        age: {
-                          required: true,
-                          range: [0,100]
-                        },
+                        age: 
+                          range: [0,100],
                         gender: "required",
-                        phone: {
-                          required: true,
-                          exactlength: 10
-                        },
+                        phone:
+                          exactlength: 10,
                         DOB: "required"
                       },
                       // Specify validation error messages
@@ -118,9 +114,6 @@ function createNewFormTemplate(){
                         age: {
                           required: "Please provide a valid age"
                         },
-                        phone: "Please enter a valid phone number",
-                        DOB: "PLease enter date of birth"
-                      },
                       submitHandler: function(form) {
                         form.submit();
                       }
