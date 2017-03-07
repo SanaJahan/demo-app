@@ -94,7 +94,7 @@ function createNewFormTemplate(){
                       $( "#DOB" ).datepicker({
                       changeMonth: true,//this option for allowing user to select month
                       changeYear: true
-                      yearRange: '1917:'+(new Date).getFullYear()
+                      yearRange: '1917:'+(new Date).getFullYear();
 
                         onSelect: function(value, ui) {
                         var today = new Date(), 
