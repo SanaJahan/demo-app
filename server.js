@@ -91,7 +91,7 @@ function createNewFormTemplate(){
       
                     <script>
                     $(function() {
-                      $( "#DOB" ).datepicker({;
+                      $( "#DOB" ).datepicker({
                       changeMonth: true,//this option for allowing user to select month
                      changeYear: true
                      }); 
