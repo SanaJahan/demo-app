@@ -1,5 +1,6 @@
 //Register new user
 var register = document.getElementById('register_btn');
+var 
    if (register != undefined) {
     register.onclick = function () {
         // Create a request object
@@ -8,6 +9,7 @@ var register = document.getElementById('register_btn');
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
               if (request.status === 200) {
+                  if ()
                   alert('User created successfully');
                   document.location.href = "/";
                 }
@@ -29,6 +31,10 @@ var register = document.getElementById('register_btn');
         var gender = document.getElementById('gender').value;
         var phone = document.getElementById('phone').value;
         var randomtext = document.getElementById('random_text').value;
+        if(phone.toString.length < 10)
+         phone.attr("placeholder", "Enter valid phone number");
+        if(age > 101 || age < 0)
+          age.attr("placeholder", "Enter valid age");
         request.open('POST','/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({firstname: firstname, lastname: lastname,age: age,dob:dob,gender: gender, phone: phone, randomtext: randomtext}));  
