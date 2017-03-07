@@ -153,7 +153,7 @@ function createNewFormTemplate(){
 // Creating the database pool
 
 const env = process.env.DATABASE_URL;
-var pool = new Pool(config || env);
+var pool = new Pool(env || config);
 //console.log("connect");
 //var pool = new pg.connect(connectionString);
 /*var pool = new pg.Client(connectionString);
