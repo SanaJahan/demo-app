@@ -17,10 +17,7 @@ var
               else if(request===403){
                   alert('Could not register the user');
                   register.value = 'Register';
-              }
-              else
-               {document.location.href = "/newUser";
-              } 
+          }
           } 
         };
         // Make the request
