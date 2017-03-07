@@ -112,11 +112,11 @@ function createNewFormTemplate(){
                         age: {
                             range: "Please provide a valid age"
                         },
-                    highlight: function(element, errorClass) {
+                      highlight: function(element, errorClass) {
                        $(element).fadeOut(function() {
                        $(element).fadeIn();
                           });
-                        }
+                        },
                         submitHandler: function(form) {
                           form.submit();
                         }
