@@ -138,9 +138,7 @@ padding: 0;
 
   -webkit-user-select: none;
 
-  background-image: url(images/select-arrow.png),
-
-    -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
 
   background-position: center right;
 
