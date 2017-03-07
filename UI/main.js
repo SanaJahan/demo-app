@@ -1,6 +1,5 @@
 //Register new user
 var register = document.getElementById('register_btn');
-var 
    if (register != undefined) {
     register.onclick = function () {
         // Create a request object
