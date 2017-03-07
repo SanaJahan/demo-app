@@ -69,15 +69,15 @@ var register = document.getElementById('register_btn');
               <head>
                 <meta name = "viewport" content = "width = device-width initial-scale=1" />
                   <title></title>
-                        <body>
-                            <ul id="list">
+                        <body><div id="list">
+                            <ul>
                             <li>
                     <a href="/patient/${listData[i].userid}">${listData[i].firstname} ${listData[i].lastname}</a>
                     </li>`;
 
 
                 }
-                content += "</ul><br><br></body>";
+                content += "</ul></div><br><br></body>";
                 list.innerHTML = content;
             }
             else {
