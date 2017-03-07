@@ -143,7 +143,8 @@ function createNewFormTemplate(){
                 <p class="contact"><label for="age">Your age</label></p>
                 <input id="age" name="age" placeholder="Your age" required="" type="text">
                 <p class="contact"><label for="dob">Your birthday</label></p>
-                <input id="DOB" name="DOB" placeholder="Your birthdate" required="" type="text"><br>
+                <input id="DOB" name="DOB" placeholder="Your birthdate" required="" type="text">
+                <p class="contact"><label for="gender">Your gender</label></p>
                 <select class="select-style gender" name="gender">
                 <option value="select">I am..</option>
                 <option value="m">Male</option>
