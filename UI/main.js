@@ -89,6 +89,6 @@ var register = document.getElementById('register_btn');
     request.open('GET', '/home', true);
     request.send(null);
 }
-}
+};
 loadList();
 
