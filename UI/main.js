@@ -61,9 +61,8 @@ var register = document.getElementById('register_btn');
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var list = document.getElementById('list');
-            var search = document.getElementById('search_button');
             if (request.status === 200) {
-                var content = '<ul>';
+                var content = `<div id="list"><ul>`;
                 var listData = JSON.parse(this.responseText);
                 for (var i=0; i< listData.length; i++) {
                     content += `<html> 
@@ -71,14 +70,14 @@ var register = document.getElementById('register_btn');
                 <meta name = "viewport" content = "width = device-width initial-scale=1" />
                   <title></title>
                         <body>
-                            <ul id ="list">
+                            <ul>
                             <li>
                     <a href="/patient/${listData[i].userid}">${listData[i].firstname} ${listData[i].lastname}</a>
                     </li>`;
 
 
                 }
-                content += "</ul><br><br></body>";
+                content += "</ul></div><br><br></body>";
                 list.innerHTML = content;
             }
             else {
