@@ -67,18 +67,14 @@ var register = document.getElementById('register_btn');
                 var listData = JSON.parse(this.responseText);
                 for (var i=0; i< listData.length; i++) {
                     content += `<html> 
-            <head>
+              <head>
                 <meta name = "viewport" content = "width = device-width initial-scale=1" />
-                  <title></title>
+                   <title></title>
                       </head>
                        <style>
                     body{
-                         background:  #FFF0F5; /* For browsers that do not support gradients */
-                         background: -webkit-linear-gradient(#FAF2FD,#E4BFF4); /* For Safari 5.1 to 6.0 */
-                         background: -o-linear-gradient(#FAF2FD,#E4BFF4); /* For Opera 11.1 to 12.0 */
-                         background: -moz-linear-gradient(#FAF2FD,#E4BFF4); /* For Firefox 3.6 to 15 */
-                         background: linear-gradient(#FAF2FD,#E4BFF4); /* Standard syntax */
-                    }
+                         background:  #FFF0F5;
+                          }
                      </style>
                       </head>
                         <body>
@@ -90,7 +86,7 @@ var register = document.getElementById('register_btn');
 
 
                 }
-                content += "</ul></center><br><br></body>";
+                content += "</ul></center></body>";
                 list.innerHTML = content;
             }
             else {
