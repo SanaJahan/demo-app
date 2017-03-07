@@ -98,7 +98,7 @@ function createNewFormTemplate(){
                                   dob = new Date(value),
                                   age = new Date(today - dob).getFullYear();
 
-                              $('#age').text(age);
+                              $('#age').val(age);
                           },
                           maxDate: '+0d',
                           yearRange: '1917:'+(new Date).getFullYear(),
