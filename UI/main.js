@@ -55,7 +55,7 @@ var register = document.getElementById('register_btn');
 
    // Make request for retrieving the list of patients
 // Make request for retrieving the list of patients
- window.onload = function {}
+ window.onload = function {
    function loadList () {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
@@ -81,7 +81,7 @@ var register = document.getElementById('register_btn');
                 list.innerHTML = content;
             }
             else {
-               document.getElementById("list").innerHTML('Oops! Could not load all names!');
+               list.innerHTML('Oops! Could not load all names!');
             }
         }
     };
