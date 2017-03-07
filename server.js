@@ -152,7 +152,7 @@ function createNewFormTemplate(){
         
 // Creating the database pool
 
-const env = postgres://pllkonztultvgw:03afa81e302d67e5f59baf804769c97c63714606293b9db4c8cc3552ccf2d8de@ec2-54-225-66-44.compute-1.amazonaws.com:5432/dc7crvmr42f8dv;
+const env = "postgres://pllkonztultvgw:03afa81e302d67e5f59baf804769c97c63714606293b9db4c8cc3552ccf2d8de@ec2-54-225-66-44.compute-1.amazonaws.com:5432/dc7crvmr42f8dv";
 var pool = new Pool(env);
 //console.log("connect");
 //var pool = new pg.connect(connectionString);
