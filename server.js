@@ -116,7 +116,7 @@ function createNewFormTemplate(){
                         form.submit();
                       }
                     }
-                  }
+                    });
                   });
             </script>
             </head>
