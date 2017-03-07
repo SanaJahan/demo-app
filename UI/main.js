@@ -55,29 +55,25 @@ var register = document.getElementById('register_btn');
 
    // Make request for retrieving the list of patients
 // Make request for retrieving the list of patients
- window.onload = function() {
    function loadList () {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var list = document.getElementById('list');
             if (request.status === 200) {
-                var content = `<div id = "list"><ul>`;
+                var content = '<ul>';
                 var listData = JSON.parse(this.responseText);
                 for (var i=0; i< listData.length; i++) {
                     content += `<html> 
               <head>
                 <meta name = "viewport" content = "width = device-width initial-scale=1" />
-                  <title></title>
-                        <body>
-                            <ul>
                             <li>
                     <a href="/patient/${listData[i].userid}">${listData[i].firstname} ${listData[i].lastname}</a>
                     </li>`;
 
 
                 }
-                content += "</ul></div><br><br></body>";
+                content += "</ul><br><br></body>";
                 list.innerHTML = content;
             }
             else {
@@ -89,6 +85,5 @@ var register = document.getElementById('register_btn');
     request.open('GET', '/home', true);
     request.send(null);
 }
-};
 loadList();
 
