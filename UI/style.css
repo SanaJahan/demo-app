@@ -1,8 +1,8 @@
 /* search box */
-@import url(http://weloveiconfonts.com/api/?family=entypo);
+/*@import url(http://weloveiconfonts.com/api/?family=entypo);
 
 /* entypo */
-[class*="entypo-"]:before {
+/*[class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
   color: #C0C0C0;
 }
@@ -14,7 +14,7 @@
   outline: 0px;
   box-shadow: 0px;
 }
-
+*/
 body {
   background-color: #D0E6FB;
 }
@@ -24,7 +24,7 @@ body {
   margin-top: 10%;
 }*/
 
-.entypo-search:before {
+/*.entypo-search:before {
   position: absolute;
   top: 0.4em;
   left: 0px;
@@ -76,7 +76,7 @@ form {
 #form form input:active{
   outline:none;
   width: 300px;
-}
+} */
 /*for registration form */
 #register_area{
 
