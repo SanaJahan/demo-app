@@ -96,7 +96,7 @@ function createNewFormTemplate(){
                           onSelect: function(value, ui) {
                               var today = new Date(),
                                   dob = new Date(value),
-                                  age = new Date(today - dob).getFullYear();
+                                  age = today.getFullYear() - ui.selectedYear;
 
                               $('#age').val(age);
                           },
