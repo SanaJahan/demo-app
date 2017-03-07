@@ -103,16 +103,17 @@ function createNewFormTemplate(){
                       // Specify validation rules
                       rules: {
                         age: 
-                          range: [0,100],
-                        gender: "required",
+                         { range: [0,100]},
                         phone:
-                          exactlength: 10,
-                        DOB: "required"
+                          {exactlength: 10}
                       },
                       // Specify validation error messages
                       messages: {
                         age: {
-                          required: "Please provide a valid age"
+                            range: "Please provide a valid age"
+                        }
+                        phone: {
+                          exactlength: "Please provide a valid number"
                         },
                       submitHandler: function(form) {
                         form.submit();
