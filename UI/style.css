@@ -19,10 +19,10 @@ body {
   background-color: #D0E6FB;
 }
 
-#container {
+/*#container {
   height: 300px;
   margin-top: 10%;
-}
+}*/
 
 .entypo-search:before {
   position: absolute;
