@@ -32,13 +32,13 @@ var register = document.getElementById('register_btn');
            document.registration.phone.focus();
            return false;
          }
-        if(age.value() <0 || age.value() > 100)
+        if(age <0 || age > 100)
          {
            alert("Enter valid age ");
            document.registration.age.focus();
            return false;
          }
-         if(gender.value() === "select"  )
+         if(gender === "select"  )
          {
            alert("Enter valid gender ");
            document.registration.gender.focus();
