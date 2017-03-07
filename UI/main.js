@@ -30,7 +30,7 @@ var register = document.getElementById('register_btn');
          {
            document.getElementById('phone').innerHTML="this is invalid number ";
            document.registration.phone.focus();
-           register.onclick.preventDefault();
+           return false;
          }
        /* if(newusername === '' || newuname === '' || newemail === '' || newpassword === ''){
            alert("Please fill up all the fields");
