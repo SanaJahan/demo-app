@@ -26,9 +26,9 @@ var register = document.getElementById('register_btn');
         var gender = document.getElementById('gender').value;
         var phone = document.getElementById('phone').value;
         var randomtext = document.getElementById('random_text').value;
-        if(phone.toString.length < 10)
+        if(phone.toString.length != 10)
          {
-           document.getElementById('phone').innerHTML="this is invalid number ";
+           alert("this is invalid number ");
            document.registration.phone.focus();
            return false;
          }
