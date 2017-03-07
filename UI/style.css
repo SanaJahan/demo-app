@@ -1,8 +1,4 @@
 /* search box */
-
-.button_box2 {
-margin:100px auto;
-}
 /*-------------------------------------*/
 .cf:before, .cf:after{
 content:"";
@@ -61,50 +57,7 @@ color: #999;
 font-weight: normal;
 font-style: italic;
 }
-.form-wrapper-2 button {
-overflow: visible;
-position: relative;
-float: right;
-border: 0;
-padding: 0;
-cursor: pointer;
-height: 40px;
-width: 110px;
-font: bold 15px/40px 'Raleway', sans-serif;
-color: #fff;
-text-transform: uppercase;
-background: #D88F3C;
--moz-border-radius: 0 3px 3px 0;
--webkit-border-radius: 0 3px 3px 0;
-border-radius: 0 3px 3px 0;
-text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
-}
-.form-wrapper-2 button:hover{
-background: #FA8807;
-}
-.form-wrapper-2 button:active,
-.form-wrapper-2 button:focus{
-background: #c42f2f;
-}
-.form-wrapper-2 button:before {
-content: '';
-position: absolute;
-border-width: 8px 8px 8px 0;
-border-style: solid solid solid none;
-border-color: transparent #D88F3C transparent;
-top: 12px;
-left: -6px;
-}
-.form-wrapper-2 button:hover:before{
-border-right-color: #FA8807;
-}
-.form-wrapper-2 button:focus:before{
-border-right-color: #c42f2f;
-}
-.form-wrapper-2 button::-moz-focus-inner {
-border: 0;
-padding: 0;
-}
+
 /*for registration form */
 #register_area{
 
