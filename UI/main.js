@@ -77,7 +77,7 @@ var register = document.getElementById('register_btn');
                 list.innerHTML = content;
             }
             else {
-               alert('Oops! Could not load all names!');
+               list.innerHTML('Oops! Could not load all names!');
             }
         }
     };
