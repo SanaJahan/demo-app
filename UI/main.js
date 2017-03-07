@@ -55,7 +55,7 @@ var register = document.getElementById('register_btn');
 
    // Make request for retrieving the list of patients
 // Make request for retrieving the list of patients
- window.onload = function {
+ window.onload = function() {
    function loadList () {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
@@ -89,6 +89,6 @@ var register = document.getElementById('register_btn');
     request.open('GET', '/home', true);
     request.send(null);
 }
-};
+}
 loadList();
 
