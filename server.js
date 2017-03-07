@@ -141,7 +141,7 @@ function createNewFormTemplate(){
         
 // Creating the database pool
 //var client = new Client(process.env.DATABASE_URL);
-var env = process.env.DATABASE_URL;
+var env = newCLient(process.env.DATABASE_URL);
 var pool = new Pool(env || config);
 //INSERTING THE USERNAME and DETAILS FOR REGISTRATION
 
