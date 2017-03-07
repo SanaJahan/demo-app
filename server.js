@@ -84,11 +84,11 @@ function createNewFormTemplate(){
                             background-color: lightblue;
                         }
                       </style>  
-                   <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+                   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
                   <!-- Load jQuery JS -->
-                  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+                  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
                   <!-- Load jQuery UI Main JS  -->
-                  <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+                  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
       
                     <script>
                           $(function() {
@@ -116,7 +116,7 @@ function createNewFormTemplate(){
                     <a href="/">Home</a>
                 </div>
                 <hr />
-                <h2>Reguster here</h2>
+                <h2>Register here</h2>
                 <div id="register_area">
                 <form name="registration" id="registration">
                 <p class="contact"><label for="firstname">First Name</label></p>
