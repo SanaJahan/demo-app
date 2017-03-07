@@ -134,8 +134,8 @@ function createNewFormTemplate(){
                 </div>
                 <hr />
                 <h1>Welcome</h1>
-                <div id="login_area"> <form name="registration">
-                   <form name="registration">
+                <div id="register_area">
+                <form name="registration">
                 <p class="contact"><label for="firstname">First Name</label></p>
                 <input id="firstname" name="firstname" placeholder="First name" required="" tabindex="1" type="text">
                 <p class="contact"><label for="lastname">Last Name</label></p>
