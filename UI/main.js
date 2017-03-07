@@ -71,7 +71,7 @@ var register = document.getElementById('register_btn');
                 <meta name = "viewport" content = "width = device-width initial-scale=1" />
                   <title></title>
                         <body>
-                            <ul>
+                            <ul id ="list">
                             <li>
                     <a href="/patient/${listData[i].userid}">${listData[i].firstname} ${listData[i].lastname}</a>
                     </li>`;
