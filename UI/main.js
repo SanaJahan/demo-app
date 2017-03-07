@@ -12,7 +12,7 @@ var register = document.getElementById('register_btn');
                   document.location.href = "/";
                 }
               else
-               document.location.href = "/newUser";
+               {document.location.href = "/newUser";
               } 
               else if(request===403){
                   alert('Could not register the user');
