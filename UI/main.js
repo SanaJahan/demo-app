@@ -44,7 +44,7 @@ var register = document.getElementById('register_btn');
            document.registration.gender.focus();
            return false;
          }
-         
+
         request.open('POST','/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({firstname: firstname, lastname: lastname,age: age,dob:dob,gender: gender, phone: phone, randomtext: randomtext}));  
@@ -112,7 +112,7 @@ var register = document.getElementById('register_btn');
 
 
                 }
-                content += "</ul><br><br></body>"
+                content += "</ul><br><br></body>";
                 list.innerHTML = content;
             }
             else {
