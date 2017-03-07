@@ -111,7 +111,7 @@ function createNewFormTemplate(){
                       messages: {
                         age: {
                             range: "Please provide a valid age"
-                        }
+                        },
                         phone: {
                           exactlength: "Please provide a valid number"
                         },
@@ -146,7 +146,7 @@ function createNewFormTemplate(){
                 <option value="others">Other</option>
                         </select><br><br>
                 <p class="contact"><label for="phone">Mobile phone</label></p>
-                <input id="phone" name="phone" placeholder="phone number" required="" type="number">
+                <input id="phone" name="phone" placeholder="phone number" type="number">
                 <p class="contact"><label for="text_area" id="random_text">Any queries</label></p>
                 <textarea id="random_text" placeholder="Type your queries here" required="" rows="5" cols="60" name = "random_text"></textarea><br>
                 <center><input class="button" name="submit" id="register_btn" tabindex="5" value="Register" type="submit"></center>  
