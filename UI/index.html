@@ -12,7 +12,7 @@
                   var filter = $(this).val();
                   // Loop through the patient list
 
-                  $(parseJSON("#lisi li")).each(function(){
+                  $("#lisi li").each(function(){
                       // If the list item does not contain the text phrase fade it out
                       if ($(this).text().search(new RegExp(filter, "i")) < 0) {
                           $(this).fadeOut();
@@ -30,13 +30,11 @@
            <div id="app-heading"><header><h1 align = "left">Demo-App V1</h1></header></div><br/><br/>
            <ul><li style="font-family: Baloo Tamma;font-size: 1.2em"><b><a href="/newUser"> Click here to enter patient details</a></b></li>
            </ul><br>
-            <div id="form">
-            <form action="#" class="entypo-search">
-            <input id="search_name" placeholder="Search" />
-            </form>  
-          </div>
+            <div id="form" class="entypo-search">
+            <input id="search_name" placeholder="Search" />  
+            </div>
            <br>
-            <div id="list" name="listname">
+            <center><div id="list" name="listname"></div>
             </div>
         <script type="text/javascript" src="/UI/main.js">
         </script>

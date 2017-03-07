@@ -15,10 +15,6 @@
   box-shadow: 0px;
 }
 
-body {
-  background-color: #D0E6FB;
-}
-
 /*#container {
   height: 300px;
   margin-top: 10%;
@@ -46,11 +42,11 @@ body {
   transition: width .55s ease;
 }
 
-form {
+#form {
   position: relative;
 }
 
-input {
+#form input {
   width: 0px;
   height: 25px;
   font-size: 15px;
@@ -68,12 +64,12 @@ input {
   width: 200px;
 }
 
-#form:hover form input {
+#form:hover input {
   width: 200px;
 }
 
-#form form input:focus, 
-#form form input:active{
+#form input:focus, 
+#form input:active{
   outline:none;
   width: 300px;
 }

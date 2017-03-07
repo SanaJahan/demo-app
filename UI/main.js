@@ -63,13 +63,17 @@ var register = document.getElementById('register_btn');
             var list = document.getElementById('list');
             var search = document.getElementById('search_button');
             if (request.status === 200) {
-                var content = `<html><head>
-                        <meta name = "viewport" content = "width = device-width initial-scale=1" />
-                        <title>Home</title></head><body bgcolor="#FFFACD">
-                        <center><div id="list"><ul>`;
+                var content = '<ul>';
                 var listData = JSON.parse(this.responseText);
                 for (var i=0; i< listData.length; i++) {
-                    content += ` 
+                    content += `<html> 
+              <head>
+                <meta name = "viewport" content = "width = device-width initial-scale=1" />
+                   <title></title>
+                      </head>
+                      </head>
+                        <body>
+                        <div id="list">
                             <ul>
                             <li>
                     <a href="/patient/${listData[i].userid}">${listData[i].firstname} ${listData[i].lastname}</a>
@@ -77,7 +81,7 @@ var register = document.getElementById('register_btn');
 
 
                 }
-                content += "</ul></center></body></html>";
+                content += "</ul></body>";
                 list.innerHTML = content;
             }
             else {
