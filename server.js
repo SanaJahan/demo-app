@@ -90,12 +90,12 @@ function createNewFormTemplate(){
                   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
       
                     <script>
-                    $(function() {
-                      $( "#DOB" ).datepicker({
-                      changeMonth: true,//this option for allowing user to select month
-                      changeYear: true
-                      yearRange: '1917:'+(new Date).getFullYear()
-                    });
+                           $(function() {
+                          $( "#DOB" ).datepicker({
+                            changeMonth: true,
+                            changeYear: true,
+                            yearRange: '1917:'+(new Date).getFullYear()         
+                          });
 
                         onSelect: function(value, ui) {
                         var today = new Date(), 
