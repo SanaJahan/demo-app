@@ -9,6 +9,7 @@ var register = document.getElementById('register_btn');
           if (request.readyState === XMLHttpRequest.DONE) {
               if (request.status === 200) {
                   alert('User created successfully');
+                  return true;
                   document.location.href = "/";
                 }
 
