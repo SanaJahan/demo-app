@@ -8,25 +8,12 @@ var bodyParser = require('body-parser');
 var pgp = require('pg-promise')();
 var config = {
     user : 'postgres',
-    //client : 'postgresql',
     database: 'patients',
     host: '127.0.0.1',
     port: '5434',
     password: process.env.DB_PASSWORD
 };
-/*var pgPass = require('pgpass');
- 
-var connInfo = {
-  'host' : 'ec2-23-21-219-105.compute-1.amazonaws.com' ,
-  'user' : 'nfbkzdqhgmvrye' ,
-};*/
- 
-/*pgPass(connInfo, function(pass){
-  conn_info.password = pass;
-  // connect to postgresql server 
-});
-var connectionString = "postgres://nfbkzdqhgmvrye:7d12a719b7e248ebbdcf05a6624ef4992c9c1131fbad79348661b031b92253f5@ec2-23-21-219-105.compute-1.amazonaws.com:5432/dcsd2plvcg32nk"
-*/
+
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
@@ -156,19 +143,6 @@ function createNewFormTemplate(){
 
 const env = process.env.DATABASE_URL;
 var pool = new Pool(env || config);
-//console.log("connect");
-//var pool = new pg.connect(connectionString);
-/*var pool = new pg.Client(connectionString);
-       function handleDisconnect() {
-                          // the old one cannot be reused.
-    pool.connect(function(err) {                // The server is either down
-        if (err) {                                     // or restarting (takes a while sometimes).
-            console.log('2. error when connecting to db:', err);
-            setTimeout(handleDisconnect, 1000); // We introduce a delay before attempting to reconnect,
-        }                                       // to avoid a hot loop, and to allow our node script to
-    }); 
-    };  */                                    // process asynchronous requests in the meantime.
-      
 //INSERTING THE USERNAME and DETAILS FOR REGISTRATION
 
 
@@ -190,7 +164,7 @@ app.post('/create-user',function(req,res){
   });
 });
 
-//API for getting list of patients
+//API for getting list of patients as JSON strings
 app.get('/home',function(req,res){
     pool.query('SELECT userid,firstname,lastname FROM patient_info ORDER BY userid DESC' , function (err,result){
     if(err){

@@ -9,10 +9,9 @@ var register = document.getElementById('register_btn');
           if (request.readyState === XMLHttpRequest.DONE) {
               if (request.status === 200) {
                   alert('User created successfully');
-                  return true;
                   document.location.href = "/";
                 }
-
+                // If page fails to load
               else if(request===403){
                   alert('Could not register the user');
                   register.value = 'Register';
@@ -53,7 +52,6 @@ var register = document.getElementById('register_btn');
     };
    }
 
-   // Make request for retrieving the list of patients
 // Make request for retrieving the list of patients
    function loadList () {
     var request = new XMLHttpRequest();
@@ -85,5 +83,7 @@ var register = document.getElementById('register_btn');
     request.open('GET', '/home', true);
     request.send(null);
 }
+
+// List pf patients loaded on home page load
 loadList();
 

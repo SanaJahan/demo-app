@@ -7,13 +7,17 @@
         <script type="text/javascript">
         // Search function
         $(document).ready(function(){
-              $(document).keyup(function(){
+              $("#search_name").keyup(function(){
                   // Retrieve the input field text
+
                   var filter = $(this).val();
+
                   // Loop through the patient list
 
                   $("#list li").each(function(){
+
                       // If the list item does not contain the text phrase fade it out
+
                       if ($(this).text().search(new RegExp(filter, "i")) < 0) {
                           $(this).fadeOut();
                       // Show the list item if the phrase matches
@@ -30,8 +34,7 @@
            <div id="app-heading"><header><h1 align = "left">Demo-App V1</h1></header></div><br/><br/>
            <p style="font-family: Baloo Tamma;font-size: 1.2em"><b><a href="/newUser"> Click here to enter patient details</a></b></p>
            <br>
-            <input  type="text" id="search_name" placeholder="Search" />
-            </form>  
+            <input  type="text" id="search_name" placeholder="Search" />  
           </div>
         </div>
            <br>
