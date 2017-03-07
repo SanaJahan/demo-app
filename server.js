@@ -82,8 +82,18 @@ function createNewFormTemplate(){
                         input[type=number]:focus {
                             background-color: lightblue;
                         }
-                      </style>        
-               
+                      </style>  
+                  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+                  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+                  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>      
+                    <script>
+                    $(function() {
+                      $( "#DOB" ).datepicker({;
+                      changeMonth: true,//this option for allowing user to select month
+                     changeYear: true
+                     }); 
+                    });
+                    </script>
             </head>
             <body>
                 <div class=container-articles>

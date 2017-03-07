@@ -32,11 +32,19 @@ var register = document.getElementById('register_btn');
            document.registration.phone.focus();
            return false;
          }
-       /* if(newusername === '' || newuname === '' || newemail === '' || newpassword === ''){
-           alert("Please fill up all the fields");
-           }*/
-        //if(age > 101 || age < 0)
-        //  {age.innerHTML("Enter valid age");}
+        if(age.value() <0 || age.value() > 100)
+         {
+           alert("Enter valid age ");
+           document.registration.age.focus();
+           return false;
+         }
+         if(gender.value() === "select"  )
+         {
+           alert("Enter valid gender ");
+           document.registration.gender.focus();
+           return false;
+         }
+         
         request.open('POST','/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({firstname: firstname, lastname: lastname,age: age,dob:dob,gender: gender, phone: phone, randomtext: randomtext}));  
