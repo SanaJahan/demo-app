@@ -72,40 +72,17 @@ var register = document.getElementById('register_btn');
                   <title></title>
                       </head>
                        <style>
-                        #list ul li a {
-                        top:30px;
-                        padding-left: 15px;
-                        padding-right: 25px;
-                        padding-bottom: 15px;
-                        padding-top: 15px;
-                        font-size: 15px;
-                        font-weight: 400;
-                        color: #CC0099;
-                        font-family: "Abhaya Libre";
-                        text-align: center;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        margin:auto;
-                    }
-                     #list ul li a:hover {
-                      background: #FFCC00;
-                      color: #000;
-                      -webkit-text-stroke:1px black;
-                    }
-                    ul{
-                        list-style-type: none;
-                    }
                     body{
-                         background: red; /* For browsers that do not support gradients */
-                        // background: -webkit-linear-gradient(#FAF2FD,#E4BFF4); /* For Safari 5.1 to 6.0 */
-                         /*background: -o-linear-gradient(#FAF2FD,#E4BFF4); /* For Opera 11.1 to 12.0 */
-                         //background: -moz-linear-gradient(#FAF2FD,#E4BFF4); /* For Firefox 3.6 to 15 */
-                         //background: linear-gradient(#FAF2FD,#E4BFF4); /* Standard syntax */
-                   // }
-                   /*</style>
+                         background:  #FFF0F5; /* For browsers that do not support gradients */
+                         background: -webkit-linear-gradient(#FAF2FD,#E4BFF4); /* For Safari 5.1 to 6.0 */
+                         background: -o-linear-gradient(#FAF2FD,#E4BFF4); /* For Opera 11.1 to 12.0 */
+                         background: -moz-linear-gradient(#FAF2FD,#E4BFF4); /* For Firefox 3.6 to 15 */
+                         background: linear-gradient(#FAF2FD,#E4BFF4); /* Standard syntax */
+                    }
+                     </style>
                       </head>
                         <body>
-                            <div id="list">
+                            <center><div id="list">
                             <ul>
                             <li>
                     <a href="/patient/${listData[i].userid}">${listData[i].firstname} ${listData[i].lastname}</a>
@@ -113,7 +90,7 @@ var register = document.getElementById('register_btn');
 
 
                 }
-                content += "</ul><br><br></body>";
+                content += "</ul></center><br><br></body>";
                 list.innerHTML = content;
             }
             else {
