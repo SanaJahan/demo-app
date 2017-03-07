@@ -52,6 +52,7 @@ function createTemplate(listdata){
                  href="https://fonts.googleapis.com/css?family=Baloo Tamma|David Libre|Open Sans Condensed|Ubuntu|Pavanam|Pacifico">
             </head>
             <body>
+            <div id="app-heading"><header><h1 align = "left">Demo-App V1</h1></header></div><br/><br/>
                 <div style="font-family: Pacifico;font-size: 1.5em">
                    <p align="left">
                     Name : ${firstname} ${lastname}  <br>
@@ -110,11 +111,12 @@ function createNewFormTemplate(){
                     </script>
             </head>
             <body>
+            <div id="app-heading"><header><h1 align = "left">Demo-App V1</h1></header></div><br/><br/>
                 <div class=container-articles>
                     <a href="/">Home</a>
                 </div>
                 <hr />
-                <h1>Welcome</h1>
+                <h2>Reguster here</h2>
                 <div id="register_area">
                 <form name="registration" id="registration">
                 <p class="contact"><label for="firstname">First Name</label></p>
@@ -153,7 +155,7 @@ function createNewFormTemplate(){
 // Creating the database pool
 
 const env = "postgres://pllkonztultvgw:03afa81e302d67e5f59baf804769c97c63714606293b9db4c8cc3552ccf2d8de@ec2-54-225-66-44.compute-1.amazonaws.com:5432/dc7crvmr42f8dv?ssl=true";
-var pool = new Pool(env);
+var pool = new Pool(env || config);
 //console.log("connect");
 //var pool = new pg.connect(connectionString);
 /*var pool = new pg.Client(connectionString);
