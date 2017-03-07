@@ -112,7 +112,7 @@ function createNewFormTemplate(){
                         age: {
                             range: "Please provide a valid age"
                         },
-                      $(".registration").validate({
+                      $("#registration").validate({
                         submitHandler: function(form) {
                          highlight: function(element, errorClass) {
                           $(element).fadeOut(function() {
@@ -134,7 +134,7 @@ function createNewFormTemplate(){
                 <hr />
                 <h1>Welcome</h1>
                 <div id="register_area">
-                <form name="registration">
+                <form name="registration" id="registration">
                 <p class="contact"><label for="firstname">First Name</label></p>
                 <input id="firstname" name="firstname" placeholder="First name" required="" tabindex="1" type="text">
                 <p class="contact"><label for="lastname">Last Name</label></p>
