@@ -15,14 +15,15 @@
   box-shadow: 0px;
 }
 
+body {
+  background-color: #D0E6FB;
+}
+
 /*#container {
   height: 300px;
   margin-top: 10%;
 }*/
 
-body {
-  background-color: #D0E6FB;
-}
 .entypo-search:before {
   position: absolute;
   top: 0.4em;
@@ -45,11 +46,11 @@ body {
   transition: width .55s ease;
 }
 
-#form {
+form {
   position: relative;
 }
 
-#form input {
+input {
   width: 0px;
   height: 25px;
   font-size: 15px;
@@ -67,12 +68,12 @@ body {
   width: 200px;
 }
 
-#form:hover input {
+#form:hover form input {
   width: 200px;
 }
 
-#form input:focus, 
-#form input:active{
+#form form input:focus, 
+#form form input:active{
   outline:none;
   width: 300px;
 }
