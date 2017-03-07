@@ -93,8 +93,15 @@ function createNewFormTemplate(){
                     $(function() {
                       $( "#DOB" ).datepicker({
                       changeMonth: true,//this option for allowing user to select month
-                     changeYear: true
-                     }); 
+                      changeYear: true
+                      yearRange: '1917:'+(new Date).getFullYear()
+
+                        onSelect: function(value, ui) {
+                        var today = new Date(), 
+                        age = today.getFullYear() - ui.selectedYear;
+                        $('#age').text(age);
+                       } 
+                     });
                     });
                     </script>
             </head>
@@ -110,10 +117,10 @@ function createNewFormTemplate(){
                 <input id="firstname" name="firstname" placeholder="First name" required="" tabindex="1" type="text">
                 <p class="contact"><label for="lastname">Last Name</label></p>
                 <input id="lastname" name="lastname" placeholder="Last name" required="" tabindex="1" type="text">
-                <p class="contact"><label for="age">Your age</label></p>
-                <input id="age" name="age" placeholder="Your age" required="" type="number">
                 <p class="contact"><label for="dob">Your birthday</label></p>
                 <input id="DOB" name="DOB" placeholder="Your birthdate" required="" type="text">
+                <p class="contact"><label for="age">Your age</label></p>
+                <input id="age" name="age" placeholder="Your age" required="" type="number">
                 <p class="contact"><label for="gender">Your gender</label></p>
                 <select class="select-style gender" name="gender" id="gender">
                 <option value="select">I am..</option>
