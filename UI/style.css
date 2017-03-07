@@ -172,7 +172,7 @@ padding: 0;
 
 /* Heading of main page */
 
-#app-heading h1 {
+#app-heading {
 	margin: 1em 0 0.5em 0;
 	font-weight: normal;
 	position: relative;
@@ -231,6 +231,10 @@ padding: 0;
   display: block;
   width: 200px;
 }
+li a {
+  text-decoration: none;
+  color: #000;
+  }
 li a:hover {
   font-size: 25px;
   background: #FFCC00;
