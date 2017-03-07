@@ -139,14 +139,14 @@ function createNewFormTemplate(){
                 <p class="contact"><label for="gender">Your gender</label></p>
                 <select class="select-style gender" name="gender" id="gender">
                 <option value="select">I am..</option>
-                <option value="m">Male</option>
-                <option value="f">Female</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
                 <option value="others">Other</option>
                         </select><br><br>
                 <p class="contact"><label for="phone">Mobile phone</label></p>
                 <input id="phone" name="phone" placeholder="phone number" type="number">
                 <p class="contact"><label for="text_area" id="random_text">Any queries</label></p>
-                <textarea id="random_text" placeholder="Type your queries here" required="" rows="5" cols="60" name = "random_text"></textarea><br>
+                <textarea id="random_text" placeholder="Type your queries here" rows="5" cols="60" name = "random_text"></textarea><br>
                 <center><input class="button" name="submit" id="register_btn" tabindex="5" value="Register" type="submit"></center>  
                 </form>                            
                 <br>

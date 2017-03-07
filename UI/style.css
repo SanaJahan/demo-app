@@ -1,22 +1,22 @@
 /* search box */
 
-.button_box2 {
+#button_box2 {
 margin:100px auto;
 }
 /*-------------------------------------*/
-.cf:before, .cf:after{
+#cf:before, .cf:after{
 content:"";
 display:table;
 }
-.cf:after{
+#cf:after{
 clear:both;
 }
-.cf{
+#cf{
 zoom:1;
 }
 /*-------------------------------------*/
 
-.form-wrapper-2 {
+#form-wrapper-2 {
 width: 330px;
 padding: 15px;
 background: #555;
@@ -27,7 +27,7 @@ border-radius: 10px;
 -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
 box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
 }
-.form-wrapper-2 input {
+#form-wrapper-2 input {
 width: 210px;
 height: 20px;
 padding: 10px 5px;
@@ -39,29 +39,29 @@ background: #eee;
 -webkit-border-radius: 3px 0 0 3px;
 border-radius: 3px 0 0 3px;
 }
-.form-wrapper-2 input:focus {
+#form-wrapper-2 input:focus {
 outline: 0;
 background: #fff;
 -moz-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
 -webkit-box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
 box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
 }
-.form-wrapper-2 input::-webkit-input-placeholder {
+#form-wrapper-2 input::-webkit-input-placeholder {
 color: #999;
 font-weight: normal;
 font-style: italic;
 }
-.form-wrapper-2 input:-moz-placeholder {
+#form-wrapper-2 input:-moz-placeholder {
 color: #999;
 font-weight: normal;
 font-style: italic;
 }
-.form-wrapper-2 input:-ms-input-placeholder {
+#form-wrapper-2 input:-ms-input-placeholder {
 color: #999;
 font-weight: normal;
 font-style: italic;
 }
-.form-wrapper-2 button {
+#form-wrapper-2 button {
 overflow: visible;
 position: relative;
 float: right;
@@ -79,14 +79,14 @@ background: #D88F3C;
 border-radius: 0 3px 3px 0;
 text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
 }
-.form-wrapper-2 button:hover{
+#form-wrapper-2 button:hover{
 background: #FA8807;
 }
-.form-wrapper-2 button:active,
-.form-wrapper-2 button:focus{
+#form-wrapper-2 button:active,
+#form-wrapper-2 button:focus{
 background: #c42f2f;
 }
-.form-wrapper-2 button:before {
+#form-wrapper-2 button:before {
 content: '';
 position: absolute;
 border-width: 8px 8px 8px 0;
@@ -95,13 +95,13 @@ border-color: transparent #D88F3C transparent;
 top: 12px;
 left: -6px;
 }
-.form-wrapper-2 button:hover:before{
+#form-wrapper-2 button:hover:before{
 border-right-color: #FA8807;
 }
-.form-wrapper-2 button:focus:before{
+#form-wrapper-2 button:focus:before{
 border-right-color: #c42f2f;
 }
-.form-wrapper-2 button::-moz-focus-inner {
+#form-wrapper-2 button::-moz-focus-inner {
 border: 0;
 padding: 0;
 }
