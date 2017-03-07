@@ -29,9 +29,12 @@ var register = document.getElementById('register_btn');
         if(phone.toString.length < 10)
          {
            document.getElementById('phone').innerHTML="this is invalid number ";
-           document.registration.firstname.value="";
-           document.registration.firstname.focus();
+           document.registration.phone.focus();
+           register.onclick.preventDefault();
          }
+       /* if(newusername === '' || newuname === '' || newemail === '' || newpassword === ''){
+           alert("Please fill up all the fields");
+           }*/
         //if(age > 101 || age < 0)
         //  {age.innerHTML("Enter valid age");}
         request.open('POST','/create-user', true);
