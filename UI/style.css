@@ -106,14 +106,12 @@ border: 0;
 padding: 0;
 }
 /*for registration form */
-#register_area{
+.form  .registration{
 
     background:#f1f1f1; width:470px; margin:0 auto; padding-left:50px; padding-top:20px;
 
 }
 .form p.contact { font-size: 12px; margin:0px 0px 10px 0;line-height: 14px; font-family:Arial, Helvetica;}
-
- 
 
 .form input[type="text"] { width: 400px; }
 .form input.age { width: 120px; }
