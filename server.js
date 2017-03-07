@@ -92,16 +92,17 @@ function createNewFormTemplate(){
                     <script>
                            $(function() {
                           $( "#DOB" ).datepicker({
+                            onSelect: function(value, ui) {
+                            var today = new Date(), 
+                            age = today.getFullYear() - ui.selectedYear;
+                             $('#age').text(age);
+                               },
                             changeMonth: true,
                             changeYear: true,
-                            yearRange: '1917:'+(new Date).getFullYear()         
+                            yearRange: '1917:'+(new Date).getFullYear() 
+
                           });
 
-                        onSelect: function(value, ui) {
-                        var today = new Date(), 
-                        age = today.getFullYear() - ui.selectedYear;
-                        $('#age').text(age);
-                       } 
                     });
                     </script>
             </head>
