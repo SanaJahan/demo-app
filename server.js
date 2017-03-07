@@ -112,9 +112,16 @@ function createNewFormTemplate(){
                         age: {
                             range: "Please provide a valid age"
                         },
-                      submitHandler: function(form) {
-                        form.submit();
-                      }
+                      $(".registration").validate({
+                        submitHandler: function(form) {
+                         highlight: function(element, errorClass) {
+                          $(element).fadeOut(function() {
+                            $(element).fadeIn();
+                          });
+                        }
+                          form.submit();
+                        }
+                      });
                     }
                     });
                   });

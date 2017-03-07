@@ -10,7 +10,10 @@ var register = document.getElementById('register_btn');
               if (request.status === 200) {
                   alert('User created successfully');
                   document.location.href = "/";
-              } else if(request===403){
+                }
+              else( document.location.href = "/newUser";)
+              } 
+              else if(request===403){
                   alert('Could not register the user');
                   register.value = 'Register';
               }  
