@@ -42,7 +42,8 @@ function createTemplate(listdata){
             <body>
             <div id="app-heading"><header><h1 align = "left">Demo-App V1</h1></header></div><br/><br/>
                 <div style="font-family: Pacifico;font-size: 1.5em">
-                   <p align="left">
+                   <p align="center">
+                   <h2><u> Details : </u></h2><br>
                     Name : ${firstname} ${lastname}  <br>
                     Age  : ${age} </br>
                     DOB  : ${dob} </br>
@@ -143,7 +144,7 @@ function createNewFormTemplate(){
 // Creating the database pool
 //var client = new Client(process.env.DATABASE_URL);
 var env = new Client(process.env.DATABASE_URL);
-var pool = new Pool(env);
+var pool = new Pool(env); //
 //INSERTING THE USERNAME and DETAILS FOR REGISTRATION
 
 
