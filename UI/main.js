@@ -27,8 +27,6 @@ var register = document.getElementById('register_btn');
         var phone = document.getElementById('phone').value;
         var randomtext = document.getElementById('random_text').value;
         //Serial not working
-        var j = 8;
-        var userid = j++;
            //Validation for firstname
             if(firstname === ''){
                    alert("Enter your first name ");
@@ -85,7 +83,7 @@ var register = document.getElementById('register_btn');
 
         request.open('POST','/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({userid: userid,firstname: firstname, lastname: lastname,age: age,dob:dob,gender: gender, phone: phone, randomtext: randomtext}));  
+        request.send(JSON.stringify({firstname: firstname, lastname: lastname,age: age,dob:dob,gender: gender, phone: phone, randomtext: randomtext}));  
         register.value = 'Registering...';
     };
    }

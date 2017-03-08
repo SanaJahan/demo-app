@@ -29,6 +29,7 @@ function createTemplate(listdata){
     var gender = listdata.gender;
     var dob = listdata.dob;
     var phone=listdata.phone;
+    var randomtext = listdata.randomtext;
      
         var htmlTemplate =  `<html>
             <head>
@@ -50,6 +51,7 @@ function createTemplate(listdata){
                     DOB  : ${dob} </br>
                     Gender: ${gender} <br/>
                     Phone : ${phone} <br/>
+                    Query : ${randomtext} <br/>
                    </p></center>
                 </div>
            <script type="text/javascript" src="/UI/main.js"></script>
@@ -158,7 +160,7 @@ app.post('/create-user',function(req,res){
   var gender = req.body.gender;
   var phone = req.body.phone;
   var randomtext=req.body.randomtext;
-  pool.query('INSERT INTO "patient_info" (userid,firstname,lastname,age,dob,gender,phone,randomtext) VALUES ($1,$2,$3,$4,$5,$6,$7,$8)',[firstname,lastname,age,dob,gender,phone,randomtext],function(err,result){
+  pool.query('INSERT INTO "patient_info" (firstname,lastname,age,dob,gender,phone,randomtext) VALUES ($1,$2,$3,$4,$5,$6,$7)',[firstname,lastname,age,dob,gender,phone,randomtext],function(err,result){
      if(err){
            res.status(500).send(err.toString());
        }
