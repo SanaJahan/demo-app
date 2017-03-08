@@ -35,6 +35,17 @@ var register = document.getElementById('register_btn');
                    document.registration.firstname.focus();
                    return false;
            }
+           //check spaces between names
+           if(firstname.match(' ')){
+                   alert('Spaces found!');
+                   document.registration.firstname.focus();
+                   return false;
+                }
+                if(lastname.match(' ')){
+                   alert('Spaces found!');
+                   document.registration.lastname.focus();
+                   return false;
+                }
           //Validation for lastname
             if(lastname === ''){
                    alert("Enter your last name ");

@@ -174,9 +174,6 @@ app.get('/home',function(req,res){
     if(err){
         res.status(500).send(err.toString());
     }
-    else if(err === 503){
-      res.status(503).send(err.toString());
-    }
     else {
         listOfPatients=JSON.stringify(result.rows);
         res.send(listOfPatients);
