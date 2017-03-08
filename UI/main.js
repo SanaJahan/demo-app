@@ -26,9 +26,23 @@ var register = document.getElementById('register_btn');
         var gender = document.getElementById('gender').value;
         var phone = document.getElementById('phone').value;
         var randomtext = document.getElementById('random_text').value;
-           //Validation for age
-            if(firstname === '' || lastname === '' || dob === ''){
-           alert("Please fill up all the fields");
+           //Validation for firstname
+            if(firstname === ''){
+                   alert("Enter your first name ");
+                   document.registration.firstname.focus();
+                   return false;
+           }
+          //Validation for lastname
+            if(lastname === ''){
+                   alert("Enter your last name ");
+                   document.registration.lastname.focus();
+                   return false;
+           }
+           //Validation for dob
+            if(dob === ''){
+                   alert("Enter your birthday ");
+                   document.registration.dob.focus();
+                   return false;
            }
          if(age <0 || age > 100)
                  {
