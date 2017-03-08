@@ -42,6 +42,7 @@ function createTemplate(listdata){
             <body>
             <div id="app-heading"><header><h1 align = "left">Demo-App V1</h1></header></div><br/><br/>
                 <div style="font-family: Pacifico;font-size: 1.5em">
+                <a href = "/">Click here to go back to homepage</a>
                    <center><p>
                    <h2><u> Details : </u></h2>
                     Name : ${firstname} ${lastname}  <br>
