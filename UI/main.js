@@ -27,7 +27,9 @@ var register = document.getElementById('register_btn');
         var phone = document.getElementById('phone').value;
         var randomtext = document.getElementById('random_text').value;
            //Validation for age
-
+            if(firstname === '' || lastname === '' || dob === ''){
+           alert("Please fill up all the fields");
+           }
          if(age <0 || age > 100)
                  {
                    alert("Enter valid age ");
