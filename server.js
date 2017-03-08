@@ -116,7 +116,7 @@ function createNewFormTemplate(){
                 <p class="contact"><label for="dob">Your birthday</label></p>
                 <input id="DOB" name="DOB" placeholder="Your birthdate" required="" type="text">
                 <p class="contact"><label for="age">Your age</label></p>
-                <input id="age" name="age" placeholder="Your age" required="" type="number">
+                <input id="age" name="age" placeholder="Your age" required="" type="number" readonly ="readonly">
                 <p class="contact"><label for="gender">Your gender</label></p>
                 <select class="select-style gender" name="gender" id="gender">
                 <option value="select">I am..</option>
@@ -173,6 +173,9 @@ app.get('/home',function(req,res){
     pool.query('SELECT userid,firstname,lastname FROM patient_info ORDER BY userid DESC' , function (err,result){
     if(err){
         res.status(500).send(err.toString());
+    }
+    else if(err === 503){
+      res.status(503).send(err.toString());
     }
     else {
         listOfPatients=JSON.stringify(result.rows);
