@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var session = require('express-session');
 var Pool = require('pg').Pool;
+var Pool = require('pg');
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
 var pgp = require('pg-promise')();
@@ -141,7 +142,7 @@ function createNewFormTemplate(){
         
 // Creating the database pool
 //var client = new Client(process.env.DATABASE_URL);
-var env = new Client(process.env.DATABASE_URL);
+var env = new pg.Client(process.env.DATABASE_URL);
 var pool = new Pool(env || config);
 //INSERTING THE USERNAME and DETAILS FOR REGISTRATION
 
