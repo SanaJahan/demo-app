@@ -26,24 +26,32 @@ var register = document.getElementById('register_btn');
         var gender = document.getElementById('gender').value;
         var phone = document.getElementById('phone').value;
         var randomtext = document.getElementById('random_text').value;
+           //Validation for age
+
+         if(age <0 || age > 100)
+                 {
+                   alert("Enter valid age ");
+                   document.registration.age.focus();
+                   return false;
+                 }
+
+  // Validation for gender
+                  if(gender === "select"  )
+         {
+           alert("Enter valid gender ");
+           document.registration.gender.focus();
+           return false;
+         }
+
+//Validation for phone number
         if(phone.toString().length != 10)
          {
            alert("this is invalid number ");
            document.registration.phone.focus();
            return false;
          }
-        if(age <0 || age > 100)
-         {
-           alert("Enter valid age ");
-           document.registration.age.focus();
-           return false;
-         }
-         if(gender === "select"  )
-         {
-           alert("Enter valid gender ");
-           document.registration.gender.focus();
-           return false;
-         }
+       
+        
 
         request.open('POST','/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
