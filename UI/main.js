@@ -30,36 +30,36 @@ var register = document.getElementById('register_btn');
            //Validation for firstname
            var regex = /^[a-zA-Z]*$/;
               if(firstname === '' || !(firstname.match(regex)) ){
-                   document.getElementById('firstname').placeholder = "Enter valid first name ";
+                   document.getElementById('firstname').innerHTML = "Enter valid first name ";
                    document.registration.firstname.focus();
                    return false;
            }
            //check spaces between names
            if(firstname.match(' ')){
-                   alert('Spaces found!');
+                   document.getElementById('firstname').innerHTML ='No Spaces';
                    document.registration.firstname.focus();
                    return false;
                 }
                 if(lastname.match(' ')){
-                   alert('Spaces found!');
+                   document.getElementById('firstname').innerHTML = 'No Spaces';
                    document.registration.lastname.focus();
                    return false;
                 }
           //Validation for lastname
             if(lastname === '' || !(lastname.match(regex)) ){
-                   document.getElementById('lastname').placeholder("Enter valid last name");
+                   document.getElementById('lastname').innerHTML = "Enter valid last name";
                    document.registration.lastname.focus();
                    return false;
            }
            //Validation for dob
             if(dob === ''){
-                   document.getElementById('DOB').placeholder("Enter your birthday ");
+                   document.getElementById('DOB').innerHTML = "Enter birthday ";
                    document.registration.DOB.focus();
                    return false;
            }
          if(age <0 || age > 100)
                  {
-                   document.getElementById('age').placeholder("Enter valid age ");
+                   document.getElementById('age').innerHTML = "Enter valid age ";
                    document.registration.age.focus();
                    return false;
                  }
@@ -67,7 +67,7 @@ var register = document.getElementById('register_btn');
   // Validation for gender
                   if(gender === "select"  )
          {
-           alert("Enter valid gender ");
+           document.getElementById('gender').innerHTML = "Enter valid gender ";
            document.registration.gender.focus();
            return false;
          }
@@ -75,7 +75,7 @@ var register = document.getElementById('register_btn');
 //Validation for phone number
         if(phone.toString().length != 10)
          {
-           document.getElementById('phone').placeholder("Enter valid number ");
+           document.getElementById('phone').innerHTML = "Enter valid number ";
            document.registration.phone.focus();
            return false;
          }
