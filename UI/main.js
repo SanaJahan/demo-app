@@ -28,7 +28,7 @@ var register = document.getElementById('register_btn');
         var randomtext = document.getElementById('random_text').value;
         //Serial not working
            //Validation for firstname
-           //var regex = /^[a-zA-Z]*$/;
+           var regex = /^[a-zA-Z]*$/;
               if(firstname === '' || !(firstname.match(regex)) ){
                    document.getElementById('firstname').placeholder = "Enter valid first name ";
                    document.registration.firstname.focus();
