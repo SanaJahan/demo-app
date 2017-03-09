@@ -12,7 +12,7 @@ var register = document.getElementById('register_btn');
                   document.location.href = "/";
                 }
                 // If page fails to load
-              else if(request===403){
+              else if(request.status === 403){
                   alert('Could not register the user');
                   register.value = 'Register';
           }
