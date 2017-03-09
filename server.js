@@ -112,9 +112,9 @@ function createNewFormTemplate(){
                 <div id="register_area">
                 <form name="registration" id="registration">
                 <p class="contact"><label for="firstname">First Name</label></p>
-                <input id="firstname" name="firstname" placeholder="First name" required="" tabindex="1" type="text">
+                <input id="firstname" name="firstname" placeholder="First name" required="" tabindex="1" type="text" pattern='[A-Za-z\\s]*'>
                 <p class="contact"><label for="lastname">Last Name</label></p>
-                <input id="lastname" name="lastname" placeholder="Last name" required="" tabindex="1" type="text">
+                <input id="lastname" name="lastname" placeholder="Last name" required="" tabindex="1" type="text" pattern='[A-Za-z\\s]*'>
                 <p class="contact"><label for="dob">Your birthday</label></p>
                 <input id="DOB" name="DOB" placeholder="Your birthdate" required="" type="text">
                 <p class="contact"><label for="age">Your age</label></p>
