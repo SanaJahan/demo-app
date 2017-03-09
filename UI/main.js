@@ -30,7 +30,7 @@ var register = document.getElementById('register_btn');
            //Validation for firstname
            var regex = /^[a-zA-Z]*$/;
               if(firstname === '' || !(firstname.match(regex)) ){
-                   document.getElementById('firstname').innerHTML = "Enter valid first name ";
+                   document.getElementById('firstname').placeholder = "Enter valid first name ";
                    document.registration.firstname.focus();
                    return false;
            }
@@ -47,19 +47,19 @@ var register = document.getElementById('register_btn');
                 }
           //Validation for lastname
             if(lastname === '' || !(lastname.match(regex)) ){
-                   document.getElementById('lastname').innerHTML = "Enter valid last name";
+                   document.getElementById('lastname').placeholder = "Enter valid last name";
                    document.registration.lastname.focus();
                    return false;
            }
            //Validation for dob
             if(dob === ''){
-                   document.getElementById('DOB').innerHTML = "Enter birthday ";
+                   document.getElementById('DOB').placeholder = "Enter birthday ";
                    document.registration.DOB.focus();
                    return false;
            }
          if(age <0 || age > 100)
                  {
-                   document.getElementById('age').innerHTML = "Enter valid age ";
+                   alert("Enter valid age ");
                    document.registration.age.focus();
                    return false;
                  }
@@ -67,7 +67,7 @@ var register = document.getElementById('register_btn');
   // Validation for gender
                   if(gender === "select"  )
          {
-           document.getElementById('gender').innerHTML = "Enter valid gender ";
+           alert("Enter valid gender ");
            document.registration.gender.focus();
            return false;
          }
