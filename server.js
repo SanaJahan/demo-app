@@ -147,7 +147,7 @@ function createNewFormTemplate(){
         
 // Creating the database pool
 //var client = new Client(process.env.DATABASE_URL);
-var env = new Client(process.env.DATABASE_URL);
+var env = new Client("postgres://bhvvtuxplftdwy:a01f6772dcf0f73f9625dc05c03c6e0323cc57613a2c653016948360569f3c91@ec2-54-225-67-3.compute-1.amazonaws.com:5432/d1r25ado6kk8t9?ssl=true");
 var pool = new Pool(env); 
 //var pool = new Pool(config || env)
 //INSERTING THE USERNAME and DETAILS FOR REGISTRATION
