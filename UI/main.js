@@ -30,7 +30,7 @@ var register = document.getElementById('register_btn');
            //Validation for firstname
            //var regex = /^[a-zA-Z]*$/;
               if(firstname === '' ){
-                  document.registration.firstname.innerHTML("Enter your valid first name ");
+                  firstname.placeholder = "Enter your valid first name ";
                   document.registration.firstname.focus();
                    return false;
            }
@@ -54,7 +54,7 @@ var register = document.getElementById('register_btn');
            //Validation for dob
             if(dob === ''){
                    alert("Enter your birthday ");
-                   document.registration.dob.focus();
+                   document.registration.DOB.focus();
                    return false;
            }
          if(age <0 || age > 100)
