@@ -29,9 +29,9 @@ var register = document.getElementById('register_btn');
         //Serial not working
            //Validation for firstname
            //var regex = /^[a-zA-Z]*$/;
-              if(firstname === '' ){
-                   document.getElementById('firstname').placeholder = "Enter your valid first name ";
-                  document.registration.firstname.focus();
+              if(firstname === '' || !(firstname.match(regex)) ){
+                   document.getElementById('firstname').placeholder = "Enter valid first name ";
+                   document.registration.firstname.focus();
                    return false;
            }
            //check spaces between names
@@ -46,20 +46,20 @@ var register = document.getElementById('register_btn');
                    return false;
                 }
           //Validation for lastname
-            if(lastname === ''){
-                   alert("Enter your valid last name ");
+            if(lastname === '' || !(lastname.match(regex)) ){
+                   document.getElementById('lastname').placeholder("Enter valid last name");
                    document.registration.lastname.focus();
                    return false;
            }
            //Validation for dob
             if(dob === ''){
-                   alert("Enter your birthday ");
+                   document.getElementById('DOB').placeholder("Enter your birthday ");
                    document.registration.DOB.focus();
                    return false;
            }
          if(age <0 || age > 100)
                  {
-                   alert("Enter valid age ");
+                   document.getElementById('age').placeholder("Enter valid age ");
                    document.registration.age.focus();
                    return false;
                  }
@@ -75,7 +75,7 @@ var register = document.getElementById('register_btn');
 //Validation for phone number
         if(phone.toString().length != 10)
          {
-           alert("this is invalid number ");
+           document.getElementById('phone').placeholder("Enter valid number ");
            document.registration.phone.focus();
            return false;
          }
