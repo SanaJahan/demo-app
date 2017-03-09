@@ -12,6 +12,7 @@ var config = {
     database: 'patients',
     host: '127.0.0.1',
     port: '5434',
+    ssl: true,
     password: process.env.DB_PASSWORD
 };
 
@@ -146,9 +147,12 @@ function createNewFormTemplate(){
         
 // Creating the database pool
 //var client = new Client(process.env.DATABASE_URL);
-var env = new Client(process.env.DATABASE_URL);
-var pool = new Pool(env); 
-//var pol = new Pool(config || env)
+//var env = process.env.DATABASE_URL;
+//var pool = new Pool(env); 
+db = process.env.DATABASE_URL or config
+pool = new pg.Client db
+pool.connect()
+//var pool = new Pool(config || env)
 //INSERTING THE USERNAME and DETAILS FOR REGISTRATION
 
 

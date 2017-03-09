@@ -36,12 +36,12 @@ var register = document.getElementById('register_btn');
            }
            //check spaces between names
            if(firstname.match(' ')){
-                   document.getElementById('firstname').innerHTML ='No Spaces';
+                   alert('No Spaces');
                    document.registration.firstname.focus();
                    return false;
                 }
                 if(lastname.match(' ')){
-                   document.getElementById('firstname').innerHTML = 'No Spaces';
+                   alert('No Spaces');
                    document.registration.lastname.focus();
                    return false;
                 }
