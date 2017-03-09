@@ -30,7 +30,7 @@ var register = document.getElementById('register_btn');
            //Validation for firstname
            //var regex = /^[a-zA-Z]*$/;
               if(firstname === '' ){
-                  firstname.innerHTML("Enter your valid first name ");
+                  document.registration.firstname.innerHTML("Enter your valid first name ");
                   document.registration.firstname.focus();
                    return false;
            }
