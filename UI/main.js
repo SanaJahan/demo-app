@@ -84,7 +84,7 @@ var register = document.getElementById('register_btn');
 
         request.open('POST','/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({firstname: firstname, lastname: lastname,age: age,dob:dob,gender: gender, phone: phone, randomtext: randomtext}));  
+        request.send(JSON.stringify({firstname: firstname, lastname: lastname,dob:dob,age: age,gender: gender, phone: phone, randomtext: randomtext}));  
         register.value = 'Registering...';
     };
    }
