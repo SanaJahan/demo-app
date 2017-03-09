@@ -28,8 +28,9 @@ var register = document.getElementById('register_btn');
         var randomtext = document.getElementById('random_text').value;
         //Serial not working
            //Validation for firstname
-            if(firstname === ''){
-                   alert("Enter your first name ");
+           var regex = /^[a-zA-Z]*$/;
+                      if(firstname === '' && regex.test(firstname) !== true ){
+                   alert("Enter your valid first name ");
                    document.registration.firstname.focus();
                    return false;
            }
@@ -45,8 +46,8 @@ var register = document.getElementById('register_btn');
                    return false;
                 }
           //Validation for lastname
-            if(lastname === ''){
-                   alert("Enter your last name ");
+            if(lastname === '' && regex.test(lastname) !== true){
+                   alert("Enter your valid last name ");
                    document.registration.lastname.focus();
                    return false;
            }
