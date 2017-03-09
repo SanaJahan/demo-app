@@ -29,9 +29,9 @@ var register = document.getElementById('register_btn');
         //Serial not working
            //Validation for firstname
            var regex = /^[a-zA-Z]*$/;
-                      if(firstname === '' && regex.test(firstname) !== true ){
-                   alert("Enter your valid first name ");
-                   document.registration.firstname.focus();
+              if(firstname === '' && regex.test(firstname) !== true ){
+                  firstname.innerHTML("Enter your valid first name ");
+                  document.registration.firstname.focus();
                    return false;
            }
            //check spaces between names
