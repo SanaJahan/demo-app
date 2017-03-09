@@ -57,10 +57,10 @@ var register = document.getElementById('register_btn');
                    document.registration.DOB.focus();
                    return false;
            }
-         if(age <0 || age > 100)
+         if(age <0 || age > 100 || age === '')
                  {
-                   alert("Enter valid age ");
-                   document.registration.age.focus();
+                   alert("Enter valid birthday ");
+                   document.registration.DOB.focus();
                    return false;
                  }
 
