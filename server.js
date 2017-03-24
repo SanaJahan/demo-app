@@ -151,7 +151,7 @@ var env = new Client("postgres://bhvvtuxplftdwy:a01f6772dcf0f73f9625dc05c03c6e03
 //var pool = new Pool(env); 
 
 var pool = new Pool(env);
-pool.connect();
+//pool.connect();
 //INSERTING THE USERNAME and DETAILS FOR REGISTRATION
 
 
