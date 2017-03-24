@@ -2,8 +2,8 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var session = require('express-session');
-var Pool = require('pg').Pool;
-var Client = require('pg').Client;
+var Pool = require('pg');
+//var Client = require('pg').Client;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
 var pgp = require('pg-promise')();
@@ -147,9 +147,9 @@ function createNewFormTemplate(){
         
 // Creating the database pool
 //var env = new Client(process.env.DATABASE_URL);
-var env = new Client("postgres://bhvvtuxplftdwy:a01f6772dcf0f73f9625dc05c03c6e0323cc57613a2c653016948360569f3c91@ec2-54-225-67-3.compute-1.amazonaws.com:5432/d1r25ado6kk8t9?ssl=true");
-var pool = new Pool(env); 
-//pool.connect();
+var env = ("postgres://bhvvtuxplftdwy:a01f6772dcf0f73f9625dc05c03c6e0323cc57613a2c653016948360569f3c91@ec2-54-225-67-3.compute-1.amazonaws.com:5432/d1r25ado6kk8t9?ssl=true");
+var pool = new pg.Client(env); 
+pool.connect();
 //INSERTING THE USERNAME and DETAILS FOR REGISTRATION
 
 
