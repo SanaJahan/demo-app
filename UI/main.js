@@ -8,7 +8,6 @@ var register = document.getElementById('register_btn');
         request.onreadystatechange = function () {
           if (request.readyState === XMLHttpRequest.DONE) {
               if (request.status === 200) {
-                  alert('User created successfully');
                   document.location.href = "/";
                 }
                 // If page fails to load
