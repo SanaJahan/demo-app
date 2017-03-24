@@ -163,7 +163,7 @@ app.post('/create-user',function(req,res){
   var randomtext=req.body.randomtext;
   pool.query('INSERT INTO "patient_info" (firstname,lastname,dob,age,gender,phone,randomtext) VALUES ($1,$2,$3,$4,$5,$6,$7)',[firstname,lastname,dob,age,gender,phone,randomtext],function(err,result){
      if(err){
-          console.log("Could not read file: " + err)
+          console.log("Could not read file: " + err);
            res.status(500).send(err.toString());
        }
        else if(err){
