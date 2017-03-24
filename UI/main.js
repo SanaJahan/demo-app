@@ -16,6 +16,10 @@ var register = document.getElementById('register_btn');
                   alert('Could not register the user');
                   register.value = 'Register';
           }
+          else if(request.status === 503){
+                  alert('Could not register the user');
+                  register.value = 'Register';
+                }
           } 
         };
         // Make the request

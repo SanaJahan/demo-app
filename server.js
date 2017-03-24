@@ -165,6 +165,9 @@ app.post('/create-user',function(req,res){
      if(err){
            res.status(500).send(err.toString());
        }
+       else if(err){
+        res.status(503).send(err.toString());
+       }
        else{
         res.send('User created succesfully '+ firstname);
      }
@@ -219,8 +222,4 @@ res.sendFile(path.join(__dirname, 'UI', 'main.js'));
 });
 app.get('/UI/style.css', function (req, res) {
 res.sendFile(path.join(__dirname, 'UI', 'style.css'));
-});
-var port = 8080;
-app.listen(8080, function () {
-  console.log(`Web app listening on port ${port}!`);
 });
