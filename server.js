@@ -199,7 +199,7 @@ function createUpdateTemplate(listid){
                     <a href="/">Home</a>
                 </div>
                 <hr />
-                <h2>Register here</h2>
+                <h2>Update here</h2>
                 <div id="register_area">
                 <form name="registration" id="registration">
                 <p class="contact"><label for="firstname">First Name</label></p>

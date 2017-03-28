@@ -280,7 +280,6 @@ if(updated != undefined){
            return false;
          }
 
-        //request.open('POST','/patient/update/'+id, true);
         request.open('POST', '/patient/update/'+id, true);
         request.open('POST', window.location.protocol+'//'+window.location.host+'/patient/update/'+id, true);
         request.setRequestHeader('Content-Type', 'application/json');
