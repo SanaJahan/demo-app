@@ -152,6 +152,7 @@ var deleted = document.getElementById("delete");
            
         };
         // Make the request
+        request.open('POST', '/delete/'+id, true);
         request.open('DELETE', window.location.protocol+'//'+window.location.host+'/delete/'+id, true);
         request.send(null);
 
@@ -187,7 +188,7 @@ if(unUpdated != undefined){
                 }
           }
         };
-
+        request.open('POST', '/update/'+id, true);
         request.open('GET', window.location.protocol+'//'+window.location.host+'/update/'+id, true);
         request.send(null);
 
@@ -280,6 +281,7 @@ if(updated != undefined){
          }
 
         //request.open('POST','/patient/update/'+id, true);
+        request.open('POST', '/patient/update/'+id, true);
         request.open('POST', window.location.protocol+'//'+window.location.host+'/patient/update/'+id, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({firstname: firstname, lastname: lastname,dob: dob,age: age,gender: gender, phone: phone, randomtext: randomtext})); 
