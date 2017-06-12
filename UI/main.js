@@ -99,19 +99,18 @@ var register = document.getElementById('register_btn');
         if (request.readyState === XMLHttpRequest.DONE) {
             var list = document.getElementById('list');
             if (request.status === 200) {
-                var content = '<ul>';
+                var content = `<table class = "table table-striped table-hover table-bordered"><tr><th align = "center">
+                <span class = "glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Name</th></tr>`;
                 var listData = JSON.parse(this.responseText);
                 for (var i=0; i< listData.length; i++) {
-                    content += `<html> 
-              <head>
-                <meta name = "viewport" content = "width = device-width initial-scale=1" />
-                            <li>
-                    <a href="/patient/${listData[i].userid}">${listData[i].firstname} ${listData[i].lastname}</a>
-                    </li>`;
-
+                    content += 
+                    `<tr class="danger">
+                            <td>
+                            <a href="/patient/${listData[i].userid}">${listData[i].firstname} ${listData[i].lastname}</a></td>
+                        `;
 
                 }
-                content += "</ul><br><br></body>";
+                content += "</tr>";
                 list.innerHTML = content;
             }
             else {
