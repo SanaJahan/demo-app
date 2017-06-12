@@ -38,6 +38,7 @@ function createTemplate(listdata){
                 <meta name = "viewport" content = "width = device-width initial-scale=1" />
                
                 <link href="/UI/style.css" rel="stylesheet" />
+                <link href="/UI/bootstrap.min.css" rel="stylesheet"> 
                 <link rel="stylesheet"
                  href="https://fonts.googleapis.com/css?family=Baloo Tamma|David Libre|Open Sans Condensed|Ubuntu|Pavanam|Pacifico">
             </head>
@@ -374,3 +375,5 @@ res.sendFile(path.join(__dirname, 'UI', 'main.js'));
 app.get('/UI/style.css', function (req, res) {
 res.sendFile(path.join(__dirname, 'UI', 'style.css'));
 });
+
+app.use(express.static('UI'));
