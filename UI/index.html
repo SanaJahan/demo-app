@@ -1,7 +1,7 @@
 <html>
     <head>
-        <link href="/UI/style.css" rel="stylesheet" /> 
-        <link href="/UI/bootstrap.min.css" rel="stylesheet"> 
+        <link href="/style.css" rel="stylesheet" /> 
+        <link href="/bootstrap.min.css" rel="stylesheet"> 
         <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Baloo Tamma|David Libre|Open Sans Condensed|Ubuntu|Pavanam|Pacifico">
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
@@ -31,16 +31,16 @@
               </script>
     </head>
     <body>
-        
+            
            <div id="app-heading"><header><h1 align = "left">CRUD APPLICATION</h1></header></div><br/><br/>
-           <p style="font-family: Baloo Tamma;font-size: 1.2em"><b><a href="/newUser"> Click here to enter user details</a></b></p>
-           <br><p><b> Search names here : </b></p>
-           <input  type="text" id="search_name" placeholder="Search" />  
-          </div>
-        </div>
+           <div class = "container">
+           <p style="font-family: Baloo Tamma;font-size: 1.2em"><b><a href="/newUser" class = "btn btn-primary" role = "button">New User</a></b></p>
+           <br><p class = "lead"><b> Search names here : </b></p>
+           <input  type="text" class="form-control" id="search_name" placeholder="Search" />  
            <br>
             <center><div id="list" name="listname"></div>
             </center>
+          </div>
         <script type="text/javascript" src="/UI/main.js">
         </script>
          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

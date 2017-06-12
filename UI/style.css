@@ -16,67 +16,10 @@
 }
 */
 body {
-  background-color: #D0E6FB;
+  background-color: #D0E6FB !important;
 }
 
-/*#container {
-  height: 300px;
-  margin-top: 10%;
-}*/
 
-/*.entypo-search:before {
-  position: absolute;
-  top: 0.4em;
-  left: 0px;
-}
-
-#form {
-  background-color: white;
-  border-radius: 30px;
-  padding: 10px 20px;
-  width: 13px;
-  overflow: hidden;
-  position: absolute;
-  height: 30px;
-  right: 50%;
-  -webkit-transition: width .55s ease;
-  -moz-transition: width .55s ease;
-  -ms-transition: width .55s ease;
-  -o-transition: width .55s ease;
-  transition: width .55s ease;
-}
-
-form {
-  position: relative;
-}
-
-#form input {
-  width: 0px;
-  height: 25px;
-  font-size: 15px;
-  margin-left: 30px;  
-  /* margin-top: 3px; */
-  /*line-height: 30px;
-}
-
-.entypo-search {
-  position: absolute;
-  top: 20%;
-}
-
-#form:hover {
-  width: 200px;
-}
-
-#form:hover form input {
-  width: 200px;
-}
-
-#form form input:focus, 
-#form form input:active{
-  outline:none;
-  width: 300px;
-} */
 /*for registration form */
 #register_area{
 
@@ -226,6 +169,6 @@ li a {
   color: #000;
   }
 li a:hover {
-  font-size: 25px;
-  background: #FFCC00;
+  font-size: 25px; 
+  background: #6495ED;    /*FFCC00;*/
 }
